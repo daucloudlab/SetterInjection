@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id = "sonyHand" class="kz.tezdet.lessons.spring.impl.sony.SonyHand"/>
+       <bean id = "sonyHead" class="kz.tezdet.lessons.spring.impl.sony.SonyHead"/>
+       <bean id = "sonyLeg" class="kz.tezdet.lessons.spring.impl.sony.SonyLeg"/>
+
+       <bean id = "toshibaHand" class="kz.tezdet.lessons.spring.impl.toshiba.ToshibaHand"/>
+       <bean id = "toshibaHead" class="kz.tezdet.lessons.spring.impl.toshiba.ToshibaHead"/>
+       <bean id = "toshibaLeg" class="kz.tezdet.lessons.spring.impl.toshiba.ToshibaLeg"/>
+
+       <bean id = "t1000" class="kz.tezdet.lessons.spring.impl.robot.ModelT1000">
+              <property name="hand" ref="sonyHand"/>
+              <property name="head" ref="toshibaHead"/>
+              <property name="leg" ref="toshibaLeg" />
+       </bean>
+</beans>
